@@ -11,60 +11,59 @@ export default class LogIn extends Component {
         password: '',
 
     }
-
     render() {
         return (
-            <ScrollView>
-                <View style={styles.container}>
-                    <Text style={styles.starttext}> Log In</Text>
-                    <Text style={styles.bodytext}> Create Account to Continue</Text>
-                    <View style={styles.container1}>
-                        <View style={styles.container2}>
-                            <View style={styles.container3} >
-                                <View style={styles.textboxcontainer}>
-                                    <View style={styles.textbox}>
-                                        <User style={styles.iconstyle} name="user" size={20} color='white' />
-                                        <TextInput style={{ paddingStart: 15 }}
-                                            placeholder='name'
-                                            placeholderTextColor="white" />
-                                    </View>
-                                    <View style={styles.textbox3}>
-                                        <Lock style={styles.iconstyle} name="lock-outline" size={20} color='white' />
-                                        <TextInput style={{ paddingStart: 20, flex: 1 }}
-                                            placeholder='Password'
-                                            placeholderTextColor="white"
-                                            value={this.state.Pass}
-                                            secureTextEntry={this.state.showPass}
-                                            onChangeText={(txt) => this.setState({ Pass: txt })} />
-                                        <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center' }}
-                                            onPress={() => this.setState({ showPass: !this.state.showPass })}>
-                                            <Eye style={styles.EyeIcon} name={this.state.showPass == true ? 'eye-off-outline' : 'eye-outline'} size={20} color="white" />
-                                        </TouchableOpacity>
 
-                                    </View>
-                                    <TouchableOpacity activeOpacity={0.5} onPress={() => this.props.navigation.navigate('SignUp')}
-                                        style={styles.btn}>
-
-                                        <Text style={styles.SignUptxt}>Log In</Text>
+            <View style={styles.container}>
+                <Text style={styles.starttext}> Log In</Text>
+                <Text style={styles.bodytext}> Create Account to Continue</Text>
+                <View style={styles.container1}>
+                    <View style={styles.container2}>
+                        <View style={styles.container3} >
+                            <View style={styles.textboxcontainer}>
+                                <View style={styles.textbox}>
+                                    <User style={styles.iconstyle} name="user" size={20} color='white' />
+                                    <TextInput style={{ paddingStart: 15 }}
+                                        placeholder='name'
+                                        placeholderTextColor="white" />
+                                </View>
+                                <View style={styles.textbox3}>
+                                    <Lock style={styles.iconstyle} name="lock-outline" size={20} color='white' />
+                                    <TextInput style={{ paddingStart: 20, flex: 1 }}
+                                        placeholder='Password'
+                                        placeholderTextColor="white"
+                                        value={this.state.Pass}
+                                        secureTextEntry={this.state.showPass}
+                                        onChangeText={(txt) => this.setState({ Pass: txt })} />
+                                    <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center' }}
+                                        onPress={() => this.setState({ showPass: !this.state.showPass })}>
+                                        <Eye style={styles.EyeIcon} name={this.state.showPass == true ? 'eye-off-outline' : 'eye-outline'} size={20} color="white" />
                                     </TouchableOpacity>
 
-                                    <View style={styles.lasttxtcontainer}>
-                                        <Text style={styles.alreadyText}>Don't Have Account? </Text>
-                                        <TouchableOpacity activeOpacity={0.5} onPress={() => this.props.navigation.navigate('SignUp')}>
-                                            <Text style={styles.SignInText}>Sign Up</Text>
-                                        </TouchableOpacity>
+                                </View>
+                                <TouchableOpacity activeOpacity={0.5} onPress={() => this.props.navigation.navigate('SignUp')}
+                                    style={styles.btn}>
 
-                                    </View>
-                                    <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: '32%' }}>
+                                    <Text style={styles.SignUptxt}>Log In</Text>
+                                </TouchableOpacity>
 
-                                    </View>
+                                <View style={styles.lasttxtcontainer}>
+                                    <Text style={styles.alreadyText}>Don't Have Account? </Text>
+                                    <TouchableOpacity activeOpacity={0.5} onPress={() => this.props.navigation.navigate('SignUp')}>
+                                        <Text style={styles.SignInText}>Sign Up</Text>
+                                    </TouchableOpacity>
+
+                                </View>
+                                <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: '32%' }}>
+
                                 </View>
                             </View>
                         </View>
                     </View>
-
                 </View>
-            </ScrollView>
+
+            </View>
+
         )
     }
 }
@@ -79,7 +78,7 @@ const styles = StyleSheet.create({
         height: '100%',
         borderTopLeftRadius: 120,
         borderTopRightRadius: 120,
-        marginTop: '30%'
+        marginTop: '20%'
     },
     container2:
     {
@@ -144,7 +143,7 @@ const styles = StyleSheet.create({
         height: 60,
         borderRadius: 30,
         backgroundColor: 'white',
-        paddingStart: 20,
+
         marginTop: 20,
         justifyContent: 'center',
         alignItems: 'center',
@@ -179,9 +178,7 @@ const styles = StyleSheet.create({
         marginTop: 20, marginStart: 5
     },
 
-    iconstyle1: {
-        marginTop: 20, marginStart: 5,
-    },
+
     EyeIcon:
     {
         paddingEnd: 20
