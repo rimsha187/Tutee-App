@@ -8,74 +8,71 @@ import Octicons from 'react-native-vector-icons/Octicons'
 export default class SignUp extends Component {
     render() {
         return (
+            <View style={[styles.container]}>
+                <Text style={styles.starttext}> Sign Up</Text>
+                <View style={[styles.container1]} >
 
 
-            <ScrollView>
-                <View style={[styles.container]}>
-                    <Text style={styles.starttext}> Sign Up</Text>
-                    <View style={[styles.container1]} >
-
-
-                        <View style={{
-                            marginTop: 50,
-                            marginHorizontal: 25
-                        }}>
-                            <View style={styles.textbox}>
-                                <AntDesign style={styles.iconstyle} name="user" size={20} color='white' />
-                                <TextInput style={{ paddingStart: 15, }}
-                                    placeholder='Name'
-                                    placeholderTextColor="white" />
-                            </View>
-
-                            <View style={styles.textbox}>
-                                <Fontisto style={styles.iconstyle} name="email" size={20} color='white' />
-                                <TextInput style={{ paddingStart: 15, }}
-                                    placeholder='Email'
-                                    placeholderTextColor="white" />
-                            </View>
-                            <View style={styles.textbox}>
-                                <Fontisto style={styles.iconstyle} name="phone" size={20} color='white' />
-                                <TextInput style={{ paddingStart: 15, }}
-                                    placeholder='Phone Number'
-                                    placeholderTextColor="white" />
-                            </View>
-                            <View style={styles.textbox}>
-                                <MaterialIcons style={styles.iconstyle} name="batch-prediction" size={20} color='white' />
-                                <TextInput style={{ paddingStart: 15, }}
-                                    placeholder='Batch'
-                                    placeholderTextColor="white" />
-                            </View>
-                            <View style={styles.textbox}>
-                                <MaterialIcons style={styles.iconstyle} name="subject" size={20} color='white' />
-                                <TextInput style={{ paddingStart: 15, }}
-                                    placeholder='Program'
-                                    placeholderTextColor="white" />
-                            </View>
-                            <View style={styles.textbox}>
-                                <MaterialIcons style={styles.iconstyle} name="lock-outline" size={20} color='white' />
-                                <TextInput style={{ paddingStart: 15, }}
-                                    placeholder='Password'
-                                    placeholderTextColor="white" />
-                            </View>
-                            <View style={styles.textbox}>
-                                <Octicons style={styles.iconstyle} name="lock" size={20} color='white' />
-                                <TextInput style={{ paddingStart: 15, }}
-                                    placeholder='Confirm Password'
-                                    placeholderTextColor="white" />
-                            </View>
-
+                    <View style={{
+                        marginTop: 20,
+                        marginHorizontal: 25
+                    }}>
+                        <View style={styles.textbox}>
+                            <AntDesign style={styles.iconstyle} name="user" size={20} color='white' />
+                            <TextInput style={{ paddingStart: 15, }}
+                                placeholder='Name'
+                                placeholderTextColor="white" />
                         </View>
 
-                        <View>
-                            <TouchableOpacity activeOpacity={0.5}
-                                style={styles.btn}>
-                                <Text style={styles.SignUptxt}>Submit</Text>
-                            </TouchableOpacity>
+                        <View style={styles.textbox}>
+                            <Fontisto style={styles.iconstyle} name="email" size={20} color='white' />
+                            <TextInput style={{ paddingStart: 15, }}
+                                placeholder='Email'
+                                placeholderTextColor="white" />
                         </View>
+                        <View style={styles.textbox}>
+                            <Fontisto style={styles.iconstyle} name="phone" size={20} color='white' />
+                            <TextInput style={{ paddingStart: 15, }}
+                                placeholder='Phone Number'
+                                placeholderTextColor="white" />
+                        </View>
+                        <View style={styles.textbox}>
+                            <MaterialIcons style={styles.iconstyle} name="batch-prediction" size={20} color='white' />
+                            <TextInput style={{ paddingStart: 15, }}
+                                placeholder='Batch'
+                                placeholderTextColor="white" />
+                        </View>
+                        <View style={styles.textbox}>
+                            <MaterialIcons style={styles.iconstyle} name="subject" size={20} color='white' />
+                            <TextInput style={{ paddingStart: 15, }}
+                                placeholder='Program'
+                                placeholderTextColor="white" />
+                        </View>
+                        <View style={styles.textbox}>
+                            <MaterialIcons style={styles.iconstyle} name="lock-outline" size={20} color='white' />
+                            <TextInput style={{ paddingStart: 15, }}
+                                placeholder='Password'
+                                placeholderTextColor="white" />
+                        </View>
+                        <View style={styles.textbox}>
+                            <Octicons style={styles.iconstyle} name="lock" size={20} color='white' />
+                            <TextInput style={{ paddingStart: 15, }}
+                                placeholder='Confirm Password'
+                                placeholderTextColor="white" />
+                        </View>
+
                     </View>
 
+                    <View>
+                        <TouchableOpacity activeOpacity={0.5}
+                            style={styles.btn}>
+                            <Text style={styles.SignUptxt}>Submit</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
-            </ScrollView>
+
+            </View>
+
 
 
         )
@@ -92,7 +89,7 @@ const styles = StyleSheet.create({
         height: '100%',
         borderTopLeftRadius: 120,
         borderTopRightRadius: 120,
-        marginTop: '25%'
+        marginTop: '20%'
     },
     starttext:
     {
@@ -113,15 +110,15 @@ const styles = StyleSheet.create({
     },
 
     btn: {
-        marginHorizontal: 25,
-        height: 60,
+        marginHorizontal: 35,
+        height: 50,
         borderRadius: 30,
         backgroundColor: 'white',
-        paddingStart: 20,
+
 
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: "15%"
+        marginTop: "10%", marginBottom: 20
     },
     SignUptxt:
     {
